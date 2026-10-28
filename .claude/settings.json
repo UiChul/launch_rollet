@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/pre-commit-check.mjs\"",
+            "timeout": 300,
+            "statusMessage": "pre-commit 검사 중 (lint · build · test)..."
+          }
+        ]
+      }
+    ]
+  }
+}
